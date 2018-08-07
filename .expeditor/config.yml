@@ -1,0 +1,18 @@
+# Documentation available at https://expeditor.chef.io/docs/getting-started/
+
+# Slack channel in Chef Software slack to send notifications about build failures, etc
+slack:
+  notify_channel: chef-notify
+
+github:
+  # Cleanup merged PR branches
+  delete_branch_on_merge: true
+
+subscriptions:
+  promoted_to_stable
+  - workload: artifact_published:stable:chefdk:*
+    actions:
+      - bash:.expeditor/update_version.sh chefdk
+  - workload: artifact_published:stable:inspec:*
+    actions:
+      - bash:.expeditor/update_version.sh inspec
