@@ -10,7 +10,7 @@ github:
 
 subscriptions:
   promoted_to_stable
-  - workload: artifact_published:stable:chefdk:*
+  - workload: artifact_published:stable:chefdk:3.*
     actions:
       - bash:.expeditor/update_version.sh chefdk
   - workload: artifact_published:stable:inspec:*
