@@ -17,5 +17,5 @@ echo Updating Cask $PRODUCT_KEY
 echo Updating version to $VERSION
 echo Updating sha to $SHA
 
-sed -i -r "s/(version\s*\".+\")/version \"$VERSION\"/g" Casks/product_key.rb
-sed -i -r "s/(sha256\s*\".+\")/sha256 \"$SHA\"/g" Casks/product_key.rb
+sed -i -r "s/(version\s*\".+\")/version \"$VERSION\"/g" Casks/$PRODUCT_KEY.rb
+sed -i -r "s/(sha256\s*\".+\")/sha256 \"$SHA\"/g" Casks/$PRODUCT_KEY.rb
