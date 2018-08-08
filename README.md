@@ -1,6 +1,6 @@
 # Homebrew-Chef
 
-For users on MacOS, Chef maintains a Homebrew](https://brew.sh/) Casks that makes it easy to install and keep up-to-date Chef-DK, InSpec, and Chef Workstation.
+For users on MacOS, Chef maintains a [Homebrew](https://brew.sh/) Casks that makes it easy to install and keep up-to-date Chef-DK, InSpec, and Chef Workstation.
 
 ## Quick Install
 
