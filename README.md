@@ -6,8 +6,16 @@ For users on MacOS, Chef maintains a [Homebrew](https://brew.sh/) Casks that mak
 
 ```
 brew cask install chef/chef/chefdk
-# or
+```
+
+or
+
+```
 brew cask install chef/chef/inspec
-# or
+```
+
+or
+
+```
 brew cask install chef/chef/chef-workstation
 ```
