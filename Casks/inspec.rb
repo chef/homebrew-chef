@@ -8,7 +8,7 @@ cask "inspec" do
   name "InSpec by Chef"
   homepage "https://www.inspec.io/"
 
-  pkg "inspec-#{version}.pkg"
+  pkg "inspec-#{version}-1.pkg"
 
   # As suggested in https://docs.chef.io/install_dk.html#mac-os-x
   uninstall_postflight do
