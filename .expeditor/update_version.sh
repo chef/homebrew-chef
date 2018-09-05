@@ -1,9 +1,12 @@
-#!/bin/sh
+#!/bin/bash
 
 # This bumps the version in the ENV var 'VERSION' on the project specified
 # It fetches the sha256 via omnitruck api
 
 set -e
+
+# make sure the API is ready to return a new product
+sleep 120
 
 SHA="$(curl -Ss https://omnitruck.chef.io/stable/$PRODUCT_KEY/metadata\?p=mac_os_x\&pv=10.13\&m=x86_64\&v=$VERSION | sed -n 's/sha256\s*\(.*\)/\1/p')"
 
