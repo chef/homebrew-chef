@@ -14,6 +14,7 @@ SHA="$(curl -Ss $URL | sed -n 's/sha256\s*\(\S*\)/\1/p')"
 # make sure we got back a sha256 value
 if [ -z "$SHA" ]; then
   echo "Omnitruck did not return a SHA256 value for the $PRODUCT_KEY $VERSION!"
+  echo "Tried to fetch from $URL"
   exit 1
 fi
 
