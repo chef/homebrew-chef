@@ -1,6 +1,6 @@
 cask "chefdk" do
-  version "3.5.13"
-  sha256 "f6c82fc3bb7a2fc37dfc1bf6a8a7dad1c7fc8e9b892f03843c2c4f39b32e3d3c"
+  version "3.6.57"
+  sha256 "c3b16550222a707e5d8489d8bbe612950815b0a114f31f79e52e329ac4e17297"
 
   url "https://packages.chef.io/files/stable/chefdk/#{version}/mac_os_x/#{MacOS.version}/chefdk-#{version}-1.dmg"
   appcast "https://www.chef.io/chef/metadata-chefdk?p=mac_os_x&pv=#{MacOS.version}&m=x86_64&v=latest&prerelease=false"
