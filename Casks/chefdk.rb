@@ -8,7 +8,7 @@ cask "chefdk" do
   name "ChefDK"
   homepage "https://downloads.chef.io/chefdk"
 
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :sierra"
 
   pkg "chefdk-#{version}-1.pkg"
 

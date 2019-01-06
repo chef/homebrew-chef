@@ -8,6 +8,8 @@ cask "inspec" do
   name "InSpec by Chef"
   homepage "https://www.inspec.io/"
 
+  depends_on macos: '>= :sierra'
+
   pkg "inspec-#{version}-1.pkg"
 
   # As suggested in https://docs.chef.io/install_dk.html#mac-os-x
