@@ -12,8 +12,10 @@ cask 'chef-workstation' do
 
   # When updating this cask, please verify the list of paths to delete and correct it if necessary:
   #   find /usr/local/bin -lname '/opt/chef-workstation/*' | sed -E "s/^(.*)$/'\1',/"
-  uninstall pkgutil: 'com.getchef.pkg.chef-workstation',
+  uninstall quit:    'sh.chef.chef-workstation',
+            pkgutil: 'com.getchef.pkg.chef-workstation',
             delete:  [
+                       '/Applications/Chef Workstation App.app',
                        '/opt/chef-workstation/',
                        '/usr/local/bin/berks',
                        '/usr/local/bin/chef',
