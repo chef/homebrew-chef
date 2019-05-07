@@ -35,6 +35,7 @@ cask 'chef-workstation' do
                        '/usr/local/bin/push-apply',
                        '/usr/local/bin/pushy-client',
                        '/usr/local/bin/pushy-service-manager',
+                       '/usr/local/bin/uninstall_chef_workstation',
                      ]
 
   zap trash: '~/.chef-workstation/'
