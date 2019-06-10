@@ -4,7 +4,7 @@ cask 'chef-workstation' do
 
   url "https://packages.chef.io/files/stable/chef-workstation/#{version}/mac_os_x/10.13/chef-workstation-#{version}-1.dmg"
   name 'Chef Workstation'
-  homepage 'https://downloads.chef.io/chef-workstation'
+  homepage 'https://www.chef.sh/'
 
   depends_on macos: '>= :sierra'
 
@@ -12,8 +12,10 @@ cask 'chef-workstation' do
 
   # When updating this cask, please verify the list of paths to delete and correct it if necessary:
   #   find /usr/local/bin -lname '/opt/chef-workstation/*' | sed -E "s/^(.*)$/'\1',/"
-  uninstall pkgutil: 'com.getchef.pkg.chef-workstation',
+  uninstall quit:    'sh.chef.chef-workstation',
+            pkgutil: 'com.getchef.pkg.chef-workstation',
             delete:  [
+                       '/Applications/Chef Workstation App.app',
                        '/opt/chef-workstation/',
                        '/usr/local/bin/berks',
                        '/usr/local/bin/chef',
@@ -35,6 +37,7 @@ cask 'chef-workstation' do
                        '/usr/local/bin/push-apply',
                        '/usr/local/bin/pushy-client',
                        '/usr/local/bin/pushy-service-manager',
+                       '/usr/local/bin/uninstall_chef_workstation',
                      ]
 
   zap trash: '~/.chef-workstation/'
