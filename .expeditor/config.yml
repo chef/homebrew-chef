@@ -1,8 +1,9 @@
 # Documentation available at https://expeditor.chef.io/docs/getting-started/
 ---
+
 # Slack channel in Chef Software slack to send notifications about build failures, etc
 slack:
-  notify_channel: chef-infra-notify
+  notify_channel: chef-found-notify
 
 github:
   # This deletes the GitHub PR branch after successfully merged into the release branch
@@ -18,3 +19,8 @@ subscriptions:
   - workload: artifact_published:stable:chef-workstation:*
     actions:
       - bash:.expeditor/update_version.sh
+
+pipelines:
+  - verify:
+      description: Pull Request validation tests
+      public: true
