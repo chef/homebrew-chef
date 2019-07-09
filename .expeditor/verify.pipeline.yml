@@ -4,7 +4,7 @@ expeditor:
     buildkite:
       timeout_in_minutes: 30
 
-
+steps:
 - label: chefstyle-tests-ruby-2.6
   command:
     - export USER="root"
