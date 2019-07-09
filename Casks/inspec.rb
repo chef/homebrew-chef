@@ -8,15 +8,15 @@ cask "inspec" do
   name "InSpec by Chef"
   homepage "https://www.inspec.io/"
 
-  depends_on macos: '>= :sierra'
+  depends_on macos: ">= :sierra"
 
   pkg "inspec-#{version}-1.pkg"
 
   # As suggested in https://docs.chef.io/install_dk.html#mac-os-x
   uninstall_postflight do
     system_command "/usr/bin/find",
-                   args: ["/usr/local/bin", "-lname", "/opt/inspec/*", "-delete"],
-                   sudo: true
+      args: ["/usr/local/bin", "-lname", "/opt/inspec/*", "-delete"],
+      sudo: true
   end
 
   uninstall pkgutil: "com.getchef.pkg.inspec",

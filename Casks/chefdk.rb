@@ -15,8 +15,8 @@ cask "chefdk" do
   # As suggested in https://docs.chef.io/install_dk.html#mac-os-x
   uninstall_postflight do
     system_command "/usr/bin/find",
-                   args: ["/usr/local/bin", "-lname", "/opt/chefdk/*", "-delete"],
-                   sudo: true
+      args: ["/usr/local/bin", "-lname", "/opt/chefdk/*", "-delete"],
+      sudo: true
   end
 
   uninstall pkgutil: "com.getchef.pkg.chefdk",
