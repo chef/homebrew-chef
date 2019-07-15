@@ -1,4 +1,4 @@
-cask "chef" do
+cask "chef-infra-client" do
   version "15.1.36"
   sha256 "757d04d45433450cbe4e240117f38a318a89db325f22fc40338cbb6eb51671e8"
 
