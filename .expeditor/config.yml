@@ -10,7 +10,10 @@ github:
   delete_branch_on_merge: true
 
 subscriptions:
-  - workload: artifact_published:stable:chef-dk:3*
+  - workload: artifact_published:stable:chef-dk:*
+    actions:
+      - bash:.expeditor/update_version.sh
+  - workload: artifact_published:stable:chef:*
     actions:
       - bash:.expeditor/update_version.sh
   - workload: artifact_published:stable:inspec:*
