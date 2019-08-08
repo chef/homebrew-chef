@@ -15,8 +15,8 @@ function get_sha() {
   curl -Ssv $URL | sed -n 's/sha256\s*\(\S*\)/\1/p'
 }
 
-echo "Sleeping for 10 minutes to let omnitruck catch up"
-sleep 600
+echo "Sleeping for 15 minutes to let omnitruck catch up"
+sleep 900
 
 tries=12
 for (( i=1; i<=$tries; i+=1 )); do
