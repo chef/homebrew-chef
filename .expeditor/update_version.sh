@@ -39,8 +39,14 @@ echo Updating Cask $EXPEDITOR_PRODUCT_KEY
 echo Updating version to $EXPEDITOR_VERSION
 echo Updating sha to $SHA
 
-sed -i -r "s/(version\s*\".+\")/version \"$EXPEDITOR_VERSION\"/g" Casks/$EXPEDITOR_PRODUCT_KEY.rb
-sed -i -r "s/(sha256\s*\".+\")/sha256 \"$SHA\"/g" Casks/$EXPEDITOR_PRODUCT_KEY.rb
+if [[ "$EXPEDITOR_PRODUCT_KEY" == "chef" ]]; then
+  cask_file="chef-infra-client"
+else
+  cask_file="$EXPEDITOR_PRODUCT_KEY"
+fi
+
+sed -i -r "s/(version\s*\".+\")/version \"$EXPEDITOR_VERSION\"/g" Casks/$cask_file.rb
+sed -i -r "s/(sha256\s*\".+\")/sha256 \"$SHA\"/g" Casks/$cask_file.rb
 
 git add .
 
