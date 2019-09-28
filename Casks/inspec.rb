@@ -1,6 +1,6 @@
 cask "inspec" do
-  version "4.17.7"
-  sha256 "7ab0f59b74ee71322149692cf5cd94af1867c68b985d98a2ad00a93e413c0447"
+  version "4.17.11"
+  sha256 "9ace647dea9c5b92776824f4fb93bcc5dfc016e702276f34bb708d42c54093e5"
 
   # packages.chef.io was verified as official when first introduced to the cask
   url "https://packages.chef.io/files/stable/inspec/#{version}/mac_os_x/#{MacOS.version}/inspec-#{version}-1.dmg"
