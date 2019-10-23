@@ -14,15 +14,19 @@ For users on MacOS, Chef maintains a [Homebrew](https://brew.sh/) Cask that make
 ## Quick Install
 
 ```
-brew cask install chef/chef/chefdk
-
-# or
-
 brew cask install chef/chef/inspec
 
 # or
 
 brew cask install chef/chef/chef-workstation
+
+# or 
+
+brew cask install chef/chef/chef-infra-client
+
+# or
+
+brew cask install chef/chef/chefdk
 ```
 
 ## Staying Up-To-Date
