@@ -7,7 +7,7 @@ cask "chef-infra-client" do
   name "Chef Infra Client"
   homepage "https://www.chef.io/"
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   pkg "chef-#{version}-1.pkg"
 

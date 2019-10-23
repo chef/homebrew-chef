@@ -6,7 +6,7 @@ cask "chef-workstation" do
   name "Chef Workstation"
   homepage "https://www.chef.sh/"
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   pkg "chef-workstation-#{version}-1.pkg"
 

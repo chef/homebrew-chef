@@ -8,7 +8,7 @@ cask "inspec" do
   name "InSpec by Chef"
   homepage "https://www.inspec.io/"
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   pkg "inspec-#{version}-1.pkg"
 
