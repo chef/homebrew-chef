@@ -20,6 +20,7 @@ cask "chef-workstation" do
                        "/usr/local/bin/berks",
                        "/usr/local/bin/chef",
                        "/usr/local/bin/chef-cli",
+                       "/usr/local/bin/chef-analyze",
                        "/usr/local/bin/chef-apply",
                        "/usr/local/bin/chef-client",
                        "/usr/local/bin/chef-run",
