@@ -1,6 +1,6 @@
 cask "chef-infra-client" do
-  version "15.6.10"
-  sha256 "8e26b451207875c4d97a451ad2ac2d449d0f4dfa34869ade965bf8cc8112a27f"
+  version "15.7.30"
+  sha256 "7455f9f55d68e0f05bef773f8f8b6b9657a2f2b133f6f37815b5c30137664d4b"
 
   # packages.chef.io was verified as official when first introduced to the cask
   url "https://packages.chef.io/files/stable/chef/#{version}/mac_os_x/#{MacOS.version}/chef-#{version}-1.dmg"
