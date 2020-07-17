@@ -3,7 +3,7 @@
 # This bumps the version in the ENV var 'EXPEDITOR_VERSION' on the project specified
 # It fetches the sha256 via omnitruck api
 
-set -ex
+set -eou pipefail
 
 branch="expeditor/${EXPEDITOR_PRODUCT_KEY}_${EXPEDITOR_VERSION}"
 git checkout -b "$branch"
