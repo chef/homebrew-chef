@@ -12,7 +12,7 @@ URL="https://omnitruck.chef.io/stable/$EXPEDITOR_PRODUCT_KEY/metadata?p=mac_os_x
 SHA=""
 
 function get_sha() {
-  curl -Ssv $URL | sed -n 's/sha256\s*\(\S*\)/\1/p'
+  curl -Ssv --http1.1 $URL | sed -n 's/sha256\s*\(\S*\)/\1/p'
 }
 
 echo "Sleeping for 15 minutes to let omnitruck catch up"
