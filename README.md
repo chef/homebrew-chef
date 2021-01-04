@@ -9,7 +9,7 @@
 
 **Pull Request [Response Time Maximum](https://github.com/chef/chef-oss-practices/blob/master/repo-management/repo-states.md)**: 14 days
 
-For users on MacOS, Chef maintains a [Homebrew](https://brew.sh/) Cask that makes it easy to install and keep up-to-date Chef Infra Client and Chef InSpec.
+For users on macOS, Chef maintains a [Homebrew](https://brew.sh/) Cask that makes it easy to install and keep up-to-date Chef Infra Client and Chef InSpec.
 
 ## Quick Install
 
