@@ -9,24 +9,16 @@
 
 **Pull Request [Response Time Maximum](https://github.com/chef/chef-oss-practices/blob/master/repo-management/repo-states.md)**: 14 days
 
-For users on MacOS, Chef maintains a [Homebrew](https://brew.sh/) Cask that makes it easy to install and keep up-to-date ChefDK, Chef InSpec, and Chef Workstation.
+For users on MacOS, Chef maintains a [Homebrew](https://brew.sh/) Cask that makes it easy to install and keep up-to-date Chef Infra Client and Chef InSpec.
 
 ## Quick Install
 
 ```
 brew cask install chef/chef/inspec
 
-# or
-
-brew cask install chef/chef/chef-workstation
-
 # or 
 
 brew cask install chef/chef/chef-infra-client
-
-# or
-
-brew cask install chef/chef/chefdk
 ```
 
 ## Staying Up-To-Date
@@ -36,7 +28,7 @@ Packages can be easily upgraded after being installed via Homebrew
 Upgrading one package:
 
 ```
-brew cask upgrade chefdk
+brew cask upgrade chef-infra-client
 ```
 
 Upgrading all of your Casks:
