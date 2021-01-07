@@ -20,9 +20,9 @@ cask "chefdk" do
 
   pkg "chefdk-#{version}-1.pkg"
 
-  caveats do
-    discontinued
-  end
+  conflicts_with cask: "chef-workstation"
+
+  caveats "ChefDK is officially EOL as of 12/31/2020. Install Chef Workstation instead `brew install --cask chef-workstation`"
 
   # As suggested in https://docs.chef.io/install_dk.html#mac-os-x
   uninstall_postflight do
