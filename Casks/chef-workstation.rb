@@ -2,7 +2,15 @@ cask "chef-workstation" do
   version "21.1.222"
   sha256 "c1a3ee7290b25366b3c6b002948d13c880fe627e2e7026825dde46baf45b3b96"
 
-  url "https://packages.chef.io/files/stable/chef-workstation/#{version}/mac_os_x/10.14/chef-workstation-#{version}-1.dmg"
+  # big sur and later aggressively releases feature versions, which don't match our download versions
+  # for example macOS 11.1 needs to map to 11.0
+  if MacOS.version >= "11.0"
+    macos_version = "11.0"
+  else
+    macos_version = MacOS.version
+  end
+
+  url "https://packages.chef.io/files/stable/chef-workstation/#{version}/mac_os_x/#{macos_version}/chef-workstation-#{version}-1.dmg"
   name "Chef Workstation"
   homepage "https://community.chef.io/tools/chef-workstation/"
 
@@ -32,6 +40,7 @@ cask "chef-workstation" do
                        "/usr/local/bin/dco",
                        "/usr/local/bin/delivery",
                        "/usr/local/bin/foodcritic",
+                       "/usr/local/bin/habitat",
                        "/usr/local/bin/inspec",
                        "/usr/local/bin/kitchen",
                        "/usr/local/bin/knife",
