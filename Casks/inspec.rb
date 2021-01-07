@@ -6,7 +6,7 @@ cask "inspec" do
   url "https://packages.chef.io/files/stable/inspec/#{version}/mac_os_x/10.14/inspec-#{version}-1.dmg"
   appcast "https://github.com/chef/inspec/releases.atom"
   name "InSpec by Chef"
-  homepage "https://www.inspec.io/"
+  homepage "https://community.chef.io/tools/chef-inspec/"
 
   depends_on macos: ">= :high_sierra"
 

@@ -4,7 +4,7 @@ cask "chef-workstation" do
 
   url "https://packages.chef.io/files/stable/chef-workstation/#{version}/mac_os_x/10.14/chef-workstation-#{version}-1.dmg"
   name "Chef Workstation"
-  homepage "https://www.chef.sh/"
+  homepage "https://community.chef.io/tools/chef-workstation/"
 
   depends_on macos: ">= :high_sierra"
 
