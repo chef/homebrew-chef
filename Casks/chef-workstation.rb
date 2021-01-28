@@ -1,6 +1,6 @@
 cask "chef-workstation" do
-  version "21.1.222"
-  sha256 "c1a3ee7290b25366b3c6b002948d13c880fe627e2e7026825dde46baf45b3b96"
+  version "21.1.247"
+  sha256 "1b98aa4fc595bd2b6e2ab0834abe4fc7ea6b86799310b8ad01d185aded39310a"
 
   url "https://packages.chef.io/files/stable/chef-workstation/#{version}/mac_os_x/10.14/chef-workstation-#{version}-1.dmg"
   name "Chef Workstation"
