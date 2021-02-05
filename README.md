@@ -14,9 +14,13 @@ For users on macOS, Chef maintains a [Homebrew](https://brew.sh/) Cask that make
 ## Quick Install
 
 ```
-brew cask install chef/chef/inspec
+brew install chef/chef/inspec
 
 # or 
+
+brew install chef/chef/chef-infra-client
+
+# or, on brew < 2.7.0
 
 brew cask install chef/chef/chef-infra-client
 ```
@@ -28,11 +32,11 @@ Packages can be easily upgraded after being installed via Homebrew
 Upgrading one package:
 
 ```
-brew cask upgrade chef-infra-client
+brew upgrade chef-infra-client
 ```
 
 Upgrading all of your Casks:
 
 ```
-brew cask upgrade
+brew upgrade --casks
 ```
