@@ -2,13 +2,13 @@ cask "chef-workstation" do
   version "21.2.292"
   sha256 "983ee9a08e25fc7e4f0ad3c58b622436aa3831ff1cda4c6e1aefd6720dd41a26"
 
-  url "https://packages.chef.io/files/stable/chef-workstation/#{version}/mac_os_x/10.14/chef-workstation-#{version}-1.dmg"
+  url "https://packages.chef.io/files/stable/chef-workstation/#{version}/mac_os_x/10.14/chef-workstation-#{version}-1.x86_64.dmg"
   name "Chef Workstation"
   homepage "https://community.chef.io/tools/chef-workstation/"
 
   depends_on macos: ">= :high_sierra"
 
-  pkg "chef-workstation-#{version}-1.pkg"
+  pkg "chef-workstation-#{version}-1.x86_64.pkg"
 
   # When updating this cask, please verify the list of paths to delete and correct it if necessary:
   #   find /usr/local/bin -lname '/opt/chef-workstation/*' | sed -E "s/^(.*)$/'\1',/"
