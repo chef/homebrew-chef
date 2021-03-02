@@ -3,7 +3,7 @@ cask "chef-infra-client" do
   sha256 "4f98965ac0554c0d0a0a5bff8a61cc9c3ac7c09d9f819570326349e26dbb127d"
 
   # packages.chef.io was verified as official when first introduced to the cask
-  url "https://packages.chef.io/files/stable/chef/#{version}/mac_os_x/10.14/chef-#{version}-1.dmg"
+  url "https://packages.chef.io/files/stable/chef/#{version}/mac_os_x/10.14/chef-#{version}-1.x86_64.dmg"
   name "Chef Infra Client"
   homepage "https://community.chef.io/tools/chef-infra/"
 
