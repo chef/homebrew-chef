@@ -10,7 +10,7 @@ cask "inspec" do
 
   depends_on macos: ">= :high_sierra"
 
-  pkg "inspec-#{version}-1.x86_64.dmg"
+  pkg "inspec-#{version}-1.x86_64.pkg"
 
   # As suggested in https://docs.chef.io/install_dk.html#mac-os-x
   uninstall_postflight do
