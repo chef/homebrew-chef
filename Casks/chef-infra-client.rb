@@ -9,7 +9,7 @@ cask "chef-infra-client" do
 
   depends_on macos: ">= :high_sierra"
 
-  pkg "chef-#{version}-1.pkg"
+  pkg "chef-#{version}-1.x86_64.pkg"
 
   # As suggested in https://docs.chef.io/install_dk.html#mac-os-x
   uninstall_postflight do
