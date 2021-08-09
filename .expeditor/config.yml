@@ -13,16 +13,16 @@ github:
   delete_branch_on_merge: true
 
 subscriptions:
-  - workload: artifact_published:stable:chef-dk:*
-    actions:
-      - bash:.expeditor/update_version.sh
   - workload: artifact_published:stable:chef:*
+    delay: 60m
     actions:
       - bash:.expeditor/update_version.sh
   - workload: artifact_published:stable:inspec:*
+    delay: 60m
     actions:
       - bash:.expeditor/update_version.sh
   - workload: artifact_published:stable:chef-workstation:*
+    delay: 60m
     actions:
       - bash:.expeditor/update_version.sh
 
