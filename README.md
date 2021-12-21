@@ -20,9 +20,9 @@ brew install chef/chef/inspec
 
 brew install chef/chef/chef-infra-client
 
-# or, on brew < 2.7.0
+# or
 
-brew cask install chef/chef/chef-infra-client
+brew install chef/chef/chef-workstation
 ```
 
 ## Staying Up-To-Date
