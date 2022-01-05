@@ -8,7 +8,7 @@ set -eou pipefail
 branch="expeditor/${EXPEDITOR_PRODUCT_KEY}_${EXPEDITOR_VERSION}"
 git checkout -b "$branch"
 
-URL="https://omnitruck.chef.io/stable/$EXPEDITOR_PRODUCT_KEY/metadata?p=mac_os_x&pv=10.14&m=x86_64&v=$EXPEDITOR_VERSION"
+URL="https://omnitruck.chef.io/stable/$EXPEDITOR_PRODUCT_KEY/metadata?p=mac_os_x&pv=10.15&m=x86_64&v=$EXPEDITOR_VERSION"
 SHA=""
 
 function get_sha() {
