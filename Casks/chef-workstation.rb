@@ -1,47 +1,35 @@
 cask "chef-workstation" do
+  arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
+  macos_version = Hardware::CPU.intel? ? "10.15" : "11"
+
   version "22.1.745"
-  sha256 "f6beaa7b00ecb062d541648e6562c9dba3c5380176c2cef612518b114cee712a"
+  if Hardware::CPU.intel?
+    sha256 "f6beaa7b00ecb062d541648e6562c9dba3c5380176c2cef612518b114cee712a"
+  else
+    sha256 "f6beaa7b00ecb062d541648e6562c9dba3c5380176c2cef612518b114cee712a"
+  end
 
-  url "https://packages.chef.io/files/stable/chef-workstation/#{version}/mac_os_x/10.15/chef-workstation-#{version}-1.x86_64.dmg"
+  url "https://packages.chef.io/files/stable/chef-workstation/#{version}/mac_os_x/#{macos_version}/chef-workstation-#{version}-1.#{arch}.dmg"
   name "Chef Workstation"
-  desc "Packages all the tools necessary to be successful with Chef Infra and InSpec"
-  homepage "https://community.chef.io/tools/chef-workstation/"
+  desc "All-in-one installer for the tools you need to manage your Chef infrastructure"
+  homepage "https://docs.chef.io/workstation/"
 
-  depends_on macos: ">= :catalina"
+  livecheck do
+    url "https://omnitruck.chef.io/stable/chef-workstation/metadata?p=mac_os_x&pv=#{macos_version}&m=#{arch}&v=latest"
+    regex(/version\s*(\d+(?:\.\d+)+)/i)
+  end
 
-  pkg "chef-workstation-#{version}-1.x86_64.pkg"
+  depends_on macos: ">= :mojave"
 
-  # When updating this cask, please verify the list of paths to delete and correct it if necessary:
-  #   find /usr/local/bin -lname '/opt/chef-workstation/*' | sed -E "s/^(.*)$/'\1',/"
-  uninstall quit:    "sh.chef.chef-workstation",
-            pkgutil: "com.getchef.pkg.chef-workstation",
-            delete:  [
-              "/Applications/Chef Workstation App.app",
-              "/opt/chef-workstation/",
-              "/usr/local/bin/berks",
-              "/usr/local/bin/chef",
-              "/usr/local/bin/chef-cli",
-              "/usr/local/bin/chef-analyze",
-              "/usr/local/bin/chef-apply",
-              "/usr/local/bin/chef-client",
-              "/usr/local/bin/chef-run",
-              "/usr/local/bin/chef-shell",
-              "/usr/local/bin/chef-solo",
-              "/usr/local/bin/chef-vault",
-              "/usr/local/bin/chefx",
-              "/usr/local/bin/cookstyle",
-              "/usr/local/bin/dco",
-              "/usr/local/bin/delivery",
-              "/usr/local/bin/foodcritic",
-              "/usr/local/bin/inspec",
-              "/usr/local/bin/kitchen",
-              "/usr/local/bin/knife",
-              "/usr/local/bin/ohai",
-              "/usr/local/bin/push-apply",
-              "/usr/local/bin/pushy-client",
-              "/usr/local/bin/pushy-service-manager",
-              "/usr/local/bin/uninstall_chef_workstation",
-            ]
+  pkg "chef-workstation-#{version}-1.#{arch}.pkg"
+
+  uninstall quit:      "sh.chef.chef-workstation",
+            pkgutil:   "com.getchef.pkg.chef-workstation",
+            launchctl: "io.chef.chef-workstation.app",
+            script:    {
+              executable: "/opt/chef-workstation/bin/uninstall_chef_workstation",
+              sudo:       true,
+            }
 
   zap trash: "~/.chef-workstation/"
 end
