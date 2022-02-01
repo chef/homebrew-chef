@@ -19,7 +19,7 @@ cask "chef-workstation" do
     regex(/version\s*(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :calalina"
+  depends_on macos: ">= :catalina"
 
   pkg "chef-workstation-#{version}-1.#{arch}.pkg"
 
