@@ -3,7 +3,7 @@ cask "chefdk" do
 
   name "Chef Development Kit"
   name "ChefDK"
-  url "https://chef.io"
+  url "https://www.chef.io/index.html"
   homepage "https://www.chef.io/downloads/tools/chefdk"
   desc "DEPRECATED. This package now installs Chef Workstation"
 
