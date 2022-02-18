@@ -3,7 +3,7 @@ cask "chefdk" do
 
   name "Chef Development Kit"
   name "ChefDK"
-  url "https://www.chef.io/"
+  url "https://packages.chef.io/files/stable/chefdk/#{version}/mac_os_x/10.14/chefdk-#{version}-1.dmg"
   homepage "https://www.chef.io/downloads/tools/chefdk"
   desc "DEPRECATED. This package now installs Chef Workstation"
 
