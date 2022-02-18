@@ -3,6 +3,7 @@ cask "chefdk" do
 
   name "Chef Development Kit"
   name "ChefDK"
+  url "https://chef.io"
   homepage "https://www.chef.io/downloads/tools/chefdk"
   desc "DEPRECATED. This package now installs Chef Workstation"
 
@@ -11,6 +12,4 @@ cask "chefdk" do
   stage_only true
 
   depends_on cask: "chef-workstation"
-
-  zap trash: "~/.chefdk/"
 end
