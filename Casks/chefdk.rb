@@ -6,7 +6,7 @@ cask "chefdk" do
   appcast "https://www.chef.io/chef/metadata-chefdk?p=mac_os_x&pv=#{MacOS.version}&m=x86_64&v=latest&prerelease=false"
   name "Chef Development Kit"
   name "ChefDK"
-  homepage "https://downloads.chef.io/chefdk"
+  homepage "https://www.chef.io/downloads/tools/chefdk"
   desc "DEPRECATED. Install Chef Workstation instead"
 
   depends_on macos: ">= :mojave"
