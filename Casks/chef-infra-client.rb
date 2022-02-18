@@ -5,6 +5,7 @@ cask "chef-infra-client" do
   # packages.chef.io was verified as official when first introduced to the cask
   url "https://packages.chef.io/files/stable/chef/#{version}/mac_os_x/10.15/chef-#{version}-1.x86_64.dmg"
   name "Chef Infra Client"
+  desc "Chef Infra Client is an open-source infrastructure as code (IAC) tool for reducing manual and repetitive tasks for Windows, Linux, Mac and *nix systems."
   homepage "https://community.chef.io/tools/chef-infra/"
 
   depends_on macos: ">= :catalina"
