@@ -12,7 +12,7 @@ cask "chef-workstation" do
   url "https://packages.chef.io/files/stable/chef-workstation/#{version}/mac_os_x/#{macos_version}/chef-workstation-#{version}-1.#{arch}.dmg"
   name "Chef Workstation"
   desc "All-in-one installer for the tools you need to manage your Chef infrastructure"
-  homepage "https://docs.chef.io/workstation/"
+  homepage "https://community.chef.io/tools/chef-workstation"
 
   livecheck do
     url "https://omnitruck.chef.io/stable/chef-workstation/metadata?p=mac_os_x&pv=#{macos_version}&m=#{arch}&v=latest"
