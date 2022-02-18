@@ -11,14 +11,16 @@ cask "chefdk" do
 
   depends_on macos: ">= :mojave"
 
-  pkg "chefdk-#{version}-1.pkg"
-
   # As suggested in https://docs.chef.io/install_dk.html#mac-os-x
   uninstall_postflight do
     system_command "/usr/bin/find",
       args: ["/usr/local/bin", "-lname", "/opt/chefdk/*", "-delete"],
       sudo: true
   end
+
+  stage_only true
+
+  depends_on cask: "chef-workstation"
 
   uninstall pkgutil: "com.getchef.pkg.chefdk",
             delete:  "/opt/chefdk/"
