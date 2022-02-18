@@ -18,8 +18,6 @@ cask "chefdk" do
       sudo: true
   end
 
-  stage_only true
-
   depends_on cask: "chef-workstation"
 
   uninstall pkgutil: "com.getchef.pkg.chefdk",
