@@ -7,6 +7,7 @@ cask "chefdk" do
   name "Chef Development Kit"
   name "ChefDK"
   homepage "https://downloads.chef.io/chefdk"
+  desc "DEPRECATED. Install Chef Workstation instead"
 
   depends_on macos: ">= :mojave"
 
