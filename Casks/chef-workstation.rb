@@ -6,7 +6,7 @@ cask "chef-workstation" do
   if Hardware::CPU.intel?
     sha256 "94491479f3586b4487d097610084bc774ba158232d5e7b2e724b1588daa2dd5c"
   else
-    sha256 "94491479f3586b4487d097610084bc774ba158232d5e7b2e724b1588daa2dd5c"
+    sha256 "964d487afbd31304bd939b4f2fd16f76b33c619d4ae2bbbce4054e16f9a45b2c"
   end
 
   url "https://packages.chef.io/files/stable/chef-workstation/#{version}/mac_os_x/#{macos_version}/chef-workstation-#{version}-1.#{arch}.dmg"
