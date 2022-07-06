@@ -1,5 +1,5 @@
 cask "chef-workstation" do
-  arch, macos_version = Hardware::CPU.intel? ? ["x86_64", "10.15"] : ["arm64", "11"]
+  arch, macos_version = Hardware::CPU.intel? ? ["x86_64", "10.15"] : %w{arm64 11}
 
   version "22.7.1006"
 
