@@ -4,7 +4,13 @@ cask "inspec" do
 
   # packages.chef.io was verified as official when first introduced to the cask
   url "https://packages.chef.io/files/stable/inspec/#{version}/mac_os_x/12/inspec-#{version}-1.x86_64.dmg"
-  appcast "https://github.com/chef/inspec/releases.atom"
+
+  livecheck do
+    url "https://github.com/chef/inspec/releases.atom"
+    strategy :page_match
+    regex(%r{href=.*?\/inspec\/releases\/tag/v(\d+(?:\.\d+)*)}i)
+  end
+
   name "InSpec by Chef"
   homepage "https://community.chef.io/tools/chef-inspec/"
 
