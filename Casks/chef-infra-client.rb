@@ -1,16 +1,25 @@
 cask "chef-infra-client" do
-  version "17.10.163"
-  sha256 "ee60cff31364128ec1af5f6240f76399a0b46fb1596f4fb85e89855f689d85f1"
+  version "18.7.3"
 
   # packages.chef.io was verified as official when first introduced to the cask
-  url "https://packages.chef.io/files/stable/chef/#{version}/mac_os_x/10.15/chef-#{version}-1.x86_64.dmg"
+  on_arm do
+    sha256 "3a44f4e2614eca59897b3e736a7197bbc73c2ae3bfc8f333eb3dc0cb276fc23a"
+    url "https://packages.chef.io/files/current/chef/18.7.3/mac_os_x/12/chef-#{version}-1.arm64.dmg"
+    pkg "chef-#{version}-1.arm64.pkg"
+  end
+
+  on_intel do
+    sha256 "f9579031792d7a97cffb4b0161310132777c8ea7af06cb6f7edade1cc5f6ce74"
+    url "https://packages.chef.io/files/current/chef/18.7.3/mac_os_x/12/chef-#{version}-1.x86_64.dmg"
+    pkg "chef-#{version}-1.x86_64.pkg"
+  end
+
   name "Chef Infra Client"
   desc "open-source infrastructure as code (IAC) tool for reducing manual and repetitive tasks for Windows, Linux, Mac and *nix systems."
   homepage "https://community.chef.io/tools/chef-infra/"
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :monterrey"
 
-  pkg "chef-#{version}-1.x86_64.pkg"
 
   # As suggested in https://docs.chef.io/install_dk.html#mac-os-x
   uninstall_postflight do
