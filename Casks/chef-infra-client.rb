@@ -19,7 +19,7 @@ cask "chef-infra-client" do
   desc "open-source infrastructure as code (IAC) tool for reducing manual and repetitive tasks for Windows, Linux, Mac and *nix systems."
   homepage "https://community.chef.io/tools/chef-infra/"
 
-  depends_on macos: ">= :monterrey"
+  depends_on macos: ">= :monterey"
 
   # As suggested in https://docs.chef.io/install_dk.html#mac-os-x
   uninstall_postflight do
