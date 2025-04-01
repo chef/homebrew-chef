@@ -1,9 +1,10 @@
 cask "chef-infra-client" do
   version "18.7.3"
 
-  # packages.chef.io was verified as official when first introduced to the cask
+  # https://docs.brew.sh/Cask-Cookbook#handling-different-system-configurations
   on_arm do
     sha256 "3a44f4e2614eca59897b3e736a7197bbc73c2ae3bfc8f333eb3dc0cb276fc23a"
+    # packages.chef.io was verified as official when first introduced to the cask
     url "https://packages.chef.io/files/current/chef/18.7.3/mac_os_x/12/chef-#{version}-1.arm64.dmg"
     pkg "chef-#{version}-1.arm64.pkg"
   end
@@ -19,7 +20,6 @@ cask "chef-infra-client" do
   homepage "https://community.chef.io/tools/chef-infra/"
 
   depends_on macos: ">= :monterrey"
-
 
   # As suggested in https://docs.chef.io/install_dk.html#mac-os-x
   uninstall_postflight do
