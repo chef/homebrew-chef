@@ -1,17 +1,17 @@
 cask "chef-infra-client" do
-  version "18.7.3"
+  version "18.7.6"
 
   # https://docs.brew.sh/Cask-Cookbook#handling-different-system-configurations
   on_arm do
-    sha256 "3a44f4e2614eca59897b3e736a7197bbc73c2ae3bfc8f333eb3dc0cb276fc23a"
+    sha256 "c76e9f3f3c5952017e6b19083d8e11b8b9d8684cacfa7b0923ed070b5ffc34f3"
     # packages.chef.io was verified as official when first introduced to the cask
-    url "https://packages.chef.io/files/current/chef/18.7.3/mac_os_x/12/chef-#{version}-1.arm64.dmg"
+    url "https://packages.chef.io/files/current/chef/18.7.6/mac_os_x/12/chef-#{version}-1.arm64.dmg"
     pkg "chef-#{version}-1.arm64.pkg"
   end
 
   on_intel do
-    sha256 "f9579031792d7a97cffb4b0161310132777c8ea7af06cb6f7edade1cc5f6ce74"
-    url "https://packages.chef.io/files/current/chef/18.7.3/mac_os_x/12/chef-#{version}-1.x86_64.dmg"
+    sha256 "30eead5f4d8606381cb57efe35f75f245623bb82a824a01314d9704bea591791"
+    url "https://packages.chef.io/files/current/chef/18.7.6/mac_os_x/12/chef-#{version}-1.x86_64.dmg"
     pkg "chef-#{version}-1.x86_64.pkg"
   end
 
