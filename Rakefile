@@ -20,8 +20,7 @@ module HomebrewChef
         channel: "current",
         product_name: "chef",
         architectures: [
-          { architecture: "arm64", platform_version: "12" },
-          { architecture: "x86_64", platform_version: "12" },
+          { architecture: "arm64", platform_version: "13" },
         ],
         update_urls: true,
       }.freeze,
