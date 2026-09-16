@@ -23,7 +23,7 @@ cask "chef-infra-client" do
   depends_on :macos
 
   # As suggested in https://docs.chef.io/install_dk.html#mac-os-x
-  uninstall_postflight do
+  uninstall_postflight_steps do
     system_command "/usr/bin/find",
       args: ["/usr/local/bin", "-lname", "/opt/chef/*", "-delete"],
       sudo: true
