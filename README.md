@@ -32,3 +32,6 @@ Upgrading all of your Casks:
 ```
 brew upgrade --casks
 ```
+
+# Copyright
+See [COPYRIGHT.md](./COPYRIGHT.md).
